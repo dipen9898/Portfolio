@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Caveat:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-signature: "Caveat", cursive;
+  
+  --color-primary: #F5F5F5;
+  --color-secondary: #000000;
+  --color-accent: #F5A623;
+  --color-accent-hover: #D48C1B;
+  --color-border: #E5E5E5;
+  --color-text-muted: #666666;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-primary text-secondary font-sans antialiased selection:bg-accent selection:text-white;
+  }
+}
+
+@layer utilities {
+  .text-stroke {
+    -webkit-text-stroke: 1px currentColor;
+    color: transparent;
+  }
+}
